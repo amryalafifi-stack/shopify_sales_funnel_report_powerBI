@@ -1,45 +1,8 @@
-This project analyzes Shopify sales data in Power BI to uncover insights into transaction performance, customer purchasing behavior, and long-term customer value.
-It delivers an interactive dashboard that allows stakeholders to explore sales trends, customer retention, and revenue patterns dynamically.
+This project analyzes Shopify sales data in Power BI to uncover insights into transaction performance, customer purchasing behavior, and long-term customer value. It delivers an interactive dashboard that allows stakeholders to explore sales trends, customer retention, and revenue patterns dynamically.
 
 The work follows a structured approach from requirement gathering to insight generation, ensuring a business-ready analytical solution.
 
-1. Requirement Gathering / Business Requirements
-Reviewed the business needs from the provided documentation.
 
-Defined KPIs and visualization goals based on stakeholder expectations.
-
-Identified data sources, scope, and intended user interactions.
-
-2. Data Walkthrough
-Inspected the raw Shopify dataset to understand:
-
-Table structures
-
-Data types (dates, numbers, text)
-
-Missing/duplicate values
-
-Key fields for relationships (Order ID, Customer ID, Product Type, Province, City, Date/Time)
-
-3. Data Connection
-Connected the Power BI report to the Shopify data source.
-
-Imported raw data into Power Query for transformation.
-
-4. Data Cleaning / Quality Check
-Removed duplicate rows.
-
-Standardized date/time formats.
-
-Ensured numeric columns (Net Sales, Quantity) were correctly typed.
-
-Checked for and addressed missing values in key columns.
-
-Validated data consistency between transactions, customers, and products.
-
-5. Data Modeling
-Created a star schema model:
- to toggle between metrics.
 
 #########################################################################################################################################
 
