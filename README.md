@@ -39,129 +39,13 @@ Validated data consistency between transactions, customers, and products.
 
 5. Data Modeling
 Created a star schema model:
+ to toggle between metrics.
 
-Fact Table: Transactions (sales records with revenue, quantity, timestamps, customer IDs, product types, payment method)
+#########################################################################################################################################
 
-Dimension Tables: Customers, Products, Provinces/Cities, Dates, Payment Methods
+PREVIEW OF SALES TREND OF SHOPIFY USING POWERBI 
 
-Established relationships:
+<img width="740" height="494" alt="Screenshot 2025-08-13 130026" src="https://github.com/user-attachments/assets/f78483ed-d1a4-4c26-a842-484a4ab67bc2" />
+<img width="737" height="495" alt="Screenshot 2025-08-13 130225" src="https://github.com/user-attachments/assets/448b93b4-35dc-4b80-967e-04a9af82ba1d" />
 
-One-to-many from dimension tables to fact table.
-
-Ensured proper cross-filter direction for dashboard interactivity.
-
-6. Data Processing & DAX Calculations
-Developed measures for all KPIs required in the business brief:
-
-Transactions Performance
-Net Sales – SUM([Net Sales])
-
-Total Quantity – SUM([Quantity])
-
-Net Avg Order Value – DIVIDE([Net Sales], DISTINCTCOUNT([Order ID]))
-
-Customer Purchase Behavior
-Total Customers – DISTINCTCOUNT([Customer ID])
-
-Single Order Customers – Customers with Order Count = 1
-
-Repeat Customers – Customers with Order Count > 1
-
-Retention & Value
-Lifetime Value (LTV) – Total sales per customer
-
-Repeat Rate – (Repeat Customers / Total Customers) * 100
-
-Purchase Frequency – Average orders per customer
-
-Dynamic Measure Selector
-Implemented a parameter table with a disconnected slicer to allow dynamic switching between:
-
-Net Sales
-
-Total Quantity
-
-Total Customers
-
-Repeat Customers
-
-7. Dashboard Layout & Chart Development
-1. Regional Overview
-Filled Map – Province-level color saturation based on selected KPI.
-
-Bubble/Density Map – City-level bubbles sized by KPI.
-
-City-Level Bar Chart – Sorted by descending KPI, interactive with slicers.
-
-2. Sales Trend Over Time
-Area Chart – Daily trend of selected KPI.
-
-Hourly Bar Chart – Sales or customer count by hour (0–23), highlighting peak activity.
-
-3. Gateway Payment Method
-Donut chart ranking payment methods by usage and revenue.
-
-4. Product Type
-Bar chart comparing product categories by Net Sales and Quantity.
-
-5. Transaction-Level Data
-Detail table for drill-through to raw transactions.
-
-Linked from summary visuals for data validation.
-
-8. Interactivity Features
-Dynamic KPI measure selector updates all visuals in sync.
-
-Drill-through from maps/charts to detailed order/customer data.
-
-Province/City slicers for geographic filtering.
-
-Date range slicer for custom time-period analysis.
-
-Key Insights
-From the dashboard, we can:
-
-Identify top-performing provinces and cities in sales and customer counts.
-
-Track daily and hourly sales patterns to optimize promotions.
-
-Understand payment method preferences across customers.
-
-Highlight high-value customer segments with strong repeat purchase behavior.
-
-Monitor product category performance for inventory and marketing strategies.
-
-Tools & Technologies
-Power BI Desktop – Data modeling, DAX, visualization.
-
-Power Query – Data cleaning and transformation.
-
-DAX – KPI calculation and dynamic measure selection.
-
-Repository Structure
-yaml
-Copy
-Edit
-├── Shopify Sales Analysis Report.pbix   # Power BI file with full dashboard
-├── Shopify Analysis Presentation.pdf    # Project requirements & presentation
-├── Screenshot 2025-08-13 130026.png     # Dashboard preview image
-├── README.md   
-
-
-
-How to Use!!
-Open the .pbix file in Power BI Desktop.
-
-Use the KPI selector to toggle between metrics.
-
-Filter by date, region, product type, or payment method.
-
-Drill-through from summary charts to see detailed transaction data.
-
-Potential Next Steps
-Integrate with live Shopify API for real-time updates.
-
-Add customer segmentation using RFM analysis.
-
-Incorporate profit margin analysis alongside revenue.
-
+The two data visualizers together provide a comprehensive view of Shopify sales performance. The first visualizer serves as a high-level dashboard, presenting overall transaction metrics, customer behavior, regional sales distribution, sales trends over time, payment method breakdowns, and product-type performance. It also includes interactive filters such as "Select Measure," "Gateway," and "Province" to allow users to customize and drill down into specific aspects of the data. The second visualizer, labeled as the Details Tab, presents a detailed table listing individual customer transactions along with order information, product types, and billing locations. Together, these visualizers support both strategic analysis and detailed operational review.
